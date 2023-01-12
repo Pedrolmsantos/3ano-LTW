@@ -1,0 +1,100 @@
+<!DOCTYPE>
+    <head>
+        <meta charset=UTF-8>        <!-- para caracteres acentuados   -->
+        <link rel="stylesheet" href="style.css">
+        <script src="configs.js"></script>
+        <title>Trabalho Mancala</title>  <!-- texto na decoração da janela -->
+    </head>
+<body>
+<button id="lgbt" class="login_button" onclick="login_bt()">Fazer Login</button>
+<button class="rule" onclick="openNav()"> Regras</button>
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <ol href="#">Regras:<li>O tabuleiro contém uma linha de cavidades dos dois lados incluindo um armazém  para cada um dos jogadores;</li>
+    <li>Cada jogador controla as cavidades do seu lado, bem como o armazém que fica à sua direita;</li>
+    <li>As peças denominam-se sementes e devem ser disposta em igual numero pelas cavidades;</li>
+    <li>No ínicio os armazéns estão vazios e as restantes cavidades têm o mesmo número de sementes;</li>
+    <li>Jogadores semeiam as suas sementes alternadamente, na sua vez semeiam a partir de uma das suas cavidades;</li>
+    <li>Termina quando um dos jogadores fica sem sementes;</li> </ol>
+
+
+  </div>
+
+</div>
+<div id="RankNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <!-- Button to close the overlay navigation -->
+    <ol href="javascript:void(0)" class="closebtn" onclick="closeRank()">&times;</ol>
+    <div class="overlay-content">
+        <ol id="rkli" href="#">Ranking:</ol>
+    </div>
+</div>
+<div class="form-popup" id="myForm">
+    <form class="form-container" onsubmit="return false">
+        <label><b>Username:</b></label>
+        <input type="text" id="lg_nick" placeholder="Coloque o Username" name="username" required>
+        <label><b>Password:</b></label>
+        <input type="password" id="lg_pw" placeholder="Coloque a password" name="psw" required>
+        <button type="submit" onclick="register()" class="btn">Entrar</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Fechar</button>
+    </form>
+</div>
+<h1>MANCALA</h1>
+<div class="container">
+<div id="board">
+    <div id="a1" class="store"><p>0</p></div>
+
+    <div class="rows">
+        <div id="cima" class="cavity">
+        </div>
+        <div id="baixo" class="cavity">
+        </div>
+    </div>
+
+    <div id="a2" class="store"><p>0</p></div>
+</div>
+</div>
+<h2 id="turn"></h2>
+<div class="config">
+    <div class="cavidades">
+    <label for="nrcavidades">Nº Cavidades</label>
+    <select id="nrcavidades" name="nrcavidades">
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+    </select>
+    </div>
+    <div class="sementes">
+        <label for="nrsementes">Nº Sementes</label>
+        <select id="nrsementes" name="nrsementes">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+    </div>
+
+    <div class="pick">
+        <div><label>Vs:</label></div>
+    <div><input type="radio" id="computador" name="jogarvs" value="PC">
+    <label for="computador">PC</label><br></div>
+        <div><input type="radio" id="online" name="jogarvs" value="PL">
+    <label for="online">Online</label><br></div>
+  </div>
+    <div class="first">
+        <div><label>First Turn:</label></div>
+    <div><input type="radio" id="me" name="jogarvs1" value="ME">
+    <label for="computador">Me</label><br></div>
+        <div><input type="radio" id="cmp" name="jogarvs1" value="PC">
+    <label for="cmp">PC</label><br></div>
+    </div>
+    <input  onclick="ranking()" type="submit" value="Ranking">
+    <input  onclick="submeter()" type="submit" value="Start">
+</div>
+</body>

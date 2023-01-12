@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 15%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: Left; /* Centered text/links */
+  margin-left: 30px;
+  margin-right: 10%;
+  margin-bottom: 50px;
+  margin-top: 20px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay ol,a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 50px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 80px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+h1{
+    margin-top: 5%;
+    font-size: 70pt;
+    text-align: center;
+    border: 1px outset black;
+    margin-left: 25%;
+    background-color: #00bbff;
+    margin-right: 25%;
+    animation: shake 5s;
+    animation-iteration-count: infinite;
+    
+}
+h2{
+    margin-top: 5%;
+    font-size: 70pt;
+    text-align: center;
+}
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+.form-container {
+    max-width: 800px;
+    padding: 60px;
+    background-color: white;
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.form-container .btn {
+    background-color: blue;
+    color: White;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+.form-container .cancel {
+    background-color: red;
+}
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+body{
+    font-family: Times, serif;
+    background-color: #dbf5ff;
+
+}
+.rule{
+    font-family: Times, serif;
+    float: left;
+    margin-right: 3%;
+    margin-left: 3%;
+    
+    background-color: #00bbff;
+    color: black;
+    padding: 14px 20px;
+    border-radius: 4px;
+    font-size: 18pt;
+    cursor: pointer;
+}
+.login_button{
+    font-family: Times, serif;
+    float: right;
+    margin-right: 3%;
+    margin-left: 3%;
+    background-color: #00bbff;
+    color: black;
+    padding: 14px 20px;
+    border-radius: 4px;
+    font-size: 18pt;
+    cursor: pointer;
+}
+input[type=submit] {
+
+    background-color: #00bbff;
+    color: black;
+    padding: 14px 20px;
+    border-radius: 4px;
+    font-size: 18pt;
+    width: 145px;
+    cursor: pointer;
+}
+.cavidades{
+    margin-top: 0px;
+}
+.sementes{
+}
+/*span{
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+}*/
+.rules{
+    background-color: #68c39f;
+    border-radius: 8px;
+    margin-top: 30px;
+    margin-left: 8%;
+    width: 55%;
+}
+h2{
+    margin: 10px;
+    font-size: 30pt;
+    margin-left: 25px;
+}
+li{
+    margin-left: 5%;
+    margin-bottom:5px;
+    font-size: 18pt;
+}
+.pick{
+    margin: 10px;
+}
+#nrcavidades{
+    font-size: 16pt;
+}
+#nrsementes{
+    font-size: 16pt;
+    margin-left: 10px;
+}
+#nvia{
+    font-size: 16pt;
+    margin-left: 10px;
+}
+.first{
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.config{
+    font-size: 18pt;
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 100px;
+    justify-content:center;
+    align-items: center;
+    display: flex;
+    background-color: #68c39f;
+    width: 1400px;
+    justify-content: space-around;
+}
+.store {
+    flex: 1;
+    border-radius: 40px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+#board {
+
+    margin-top: 100px;
+    display: flex;
+    border: 1px solid #bbb;
+    box-shadow: 0 0 5px #bbb;
+    height: 300px;
+    padding: 20px;
+    background: url(wood.jpg);
+    border-radius: 20px;
+}
+
+#computador{
+    margin-left: 10px;
+}
+#player{
+    margin-left: 10px;
+}
+.pit {
+    flex-grow: 1;
+    width: 120px;
+    height: 100%;
+    padding: 20px;
+    border-radius: 40%;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, .15);
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+.store{
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, .15);
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, .5);
+    width: 100px;
+    border-radius: 50px;
+}
+.circle {
+    background: #00bbff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    background: radial-gradient(circle at 8px 8px, #5cabff, #000);
+}
+.cavity{
+    display: flex;
+    height: 50%;
+    justify-content: space-between;
+    column-gap: 15px;
+
+}
+/*.row {
+    flex: 1;
+
+    display: flex;
+ }*/
+.rows {
+    flex: 1;
+    row-gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 10px;
+}
+/*.pit {
+    cursor: pointer;
+    flex: 1;
+    border-radius: 40%;
+}*/
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
